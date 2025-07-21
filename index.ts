@@ -1,5 +1,5 @@
 const server = Bun.serve({
-  port: 3000,
+  port: parseInt(process.env.PORT ?? "3000"),
   routes: {
     "/webhook": {
       POST: async (request) => {
